@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A1ex1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <h2>Formulário</h2>
+    <form action="">
+        <fieldset>
+            <legend>Register</legend>
+            <br>
+            <label for="firstname">First Name:</label>
+            <input id="firstname" type="text" required>
+            <br>
+            <label for="lastname">Last Name:</label>
+            <input id="lastname" type="text">
+            <br>
+            <label for="email">Email:</label>
+            <input id="email" type="email" required>
+            <br>
+            <label for="pasword">Pass:</label>
+            <input id="password" type="password" minlength="6" required>
+            <br>
+            <br>
+            <label for="sex">Gender:</label>
+            <br>
+            <input type="radio" name="gender" value="male" checked> Male
+            <br>
+            <input type="radio" name="gender" value="female" checked> Female
+            <br>
+            <input type="radio" name="gender" value="other" checked> Other
+            <br>
+            <br>
+            <label for="clubesm">Clube:</label>
+            <select name="clube" id="clubesm">
+                <option value="Sporting">Sporting</option>
+                <option value="Benfica">Benfica</option>
+                <option value="Porto">Porto</option>
+                <option value="Braga">Braga</option>
+                <option value="Guimaraes">Guimarães</option>
+                <option value="Belenenses">Belenenses</option>
+            </select>
+            <br>
+            <br>
+            <input type="checkbox" name="aceito" value="concordo" checked required> Terms & Conditions
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+        </form>
+</body>
+
+</html>

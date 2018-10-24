@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Aula4ex1</title>
+
+</head>
+
+<body>
+
+    <p id="p1"></p>
+
+    <script>
+
+
+        var text = "";
+        /*
+        for (let index = 1; index <= 40; index++) {
+
+            if (index % 5 == 0 && index % 3 == 0) {
+                console.log("FizzBuzz");
+            } else if (index % 5 == 0) {
+                console.log("Buzz");
+            }
+            else if (index % 3 == 0) {
+                console.log("Fizz");
+            }
+            else {
+                text += index + "<br>";
+                document.getElementById("p1").innerHTML = text;
+            }
+        }
+        */
+
+        var x1 = 0;
+        var x2 = 1;
+        var i = 0;
+        for (let index = 0; index < 100; index++) {
+            if (index == 0) {
+                text += x1 + " ";
+            } else if (index % 2 == 0) {
+                x1 = x1 + x2;
+                text += x1 + " ";
+            } else {
+                x2 = x2 + x1;
+                text += x2 + " ";
+            }
+            
+            i = i + 1;
+            
+            if (i==5) {
+               text+="<br>";
+               i=0; 
+            }
+            document.getElementById("p1").innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>

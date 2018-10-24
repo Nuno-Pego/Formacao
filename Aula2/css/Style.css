@@ -1,0 +1,30 @@
+body {
+    /* comentario */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(83, 91, 10);
+
+}
+
+.estilo1 {
+    border: 20px solid black;
+    background-color: rgb(106, 17, 17);
+    margin: auto;
+    background-image: url("../image1.jpg");
+    background-size: repeat;
+    height: 90%;
+    width: 95%;
+}
+
+.estilo2 {
+    border: 5px solid red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#id1 {
+    height: 80vh;
+}
