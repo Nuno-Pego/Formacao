@@ -6,39 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Aula7ex1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 
 </head>
 
 <body>
-
-
-    <h2>Tabela das notas dos seus alunos</h2>
     <br>
-    <div>
+    <div class="container text-center">
+        <div>
+            <h2 class="display-5">Tabela de notas dos alunos</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 ">
+                <form>
+                    <fieldset>
+                        <input class=" form-control" type="text" id="vinpt" autofocus>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
 
-        <input type="number" id="vinpt">
-        <button id=vinp>Submeter</button>
-        <p id=p1>Indique o numero de alunos</p>
-
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 ">
+                <p id=p1>Indique o numero de alunos</p>
+                <button id=vinp class="btn btn-outline-success">Submeter</button>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 ">
+                <table class="table">
+                    <thead id="sh" style="display: none">
+                        <tr>
+                            <th>Alunos</th>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="border" id="med"></div>
     </div>
-    <br>
-    <br>
-    <div>
 
-        <table>
-            <tr>
-                <th>Alunos</th>
-                <th>Notas</th>
-            </tr>
-            <tr id="tb1">
 
-            </tr>
 
-        </table>
 
-    </div>
 
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="jsex1.js"></script>
