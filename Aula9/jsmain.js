@@ -52,7 +52,7 @@ $(document).ready(function () {
         $("#inptc").prop("disabled", false);
         $("#inptc").val("");
         $("#tb1 tr").remove();
-        $("#sh").hide();
+        $("#sh").hide();       
 
     })
 
