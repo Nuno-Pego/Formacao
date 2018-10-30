@@ -9,12 +9,12 @@ class Factura {
     constructor(cliente, artigo) {
         this.id = new Date().getTime();
         this.cliente = cliente;
-        this.artigo = [artigo];
+        this.artigos = [artigo];
     }
 
 
     addMenu(artigo) {
-        this.artigo.push(artigo);
+        this.artigos.push(artigo);
     }
 
 }

@@ -12,35 +12,34 @@
 </head>
 
 <body>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="Aula9ex1.html">Fazer pedido</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Aula10ex1.html">Lista de pedidos</a>
+        </li>
+    </ul>
     <br>
     <div class="container text-center">
         <br>
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6 ">
-                <form>
-                    <div class="form-group">
+                <div class="form-group">
+                    <form id="f1">
                         <small id="lb" class="form-text text-muted">Qual o seu nome?</small>
-                        <input class=" form-control" type="text" id="inptn" autofocus>
+                        <input class=" form-control" type="text" id="inptc" autofocus required>
                         <br>
                         <small id="lb1" class="form-text text-muted">Escolha o seu menu</small>
-                        <input class=" form-control" type="text" id="inpt" autofocus>
-                        <br>                        
-                        <small id="lb" class="form-text text-muted">Algum extra?</small>
-                        <input class=" form-control" type="text" id="inpte" autofocus>
+                        <input class=" form-control" type="text" id="inptm" required>
                         <br>
-                        <button id=clka class="btn btn-outline-warning">Adicionar Pedido</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-3"></div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6 ">
-                <button id=clk1 class="btn btn-outline-success">Próximo Pedido</button>
+                        <small id="lb2" class="form-text text-muted">Algum extra?</small>
+                        <input class=" form-control" type="text" id="inpte">
+                        <br>
+                        <button id=clk1 class="btn btn-outline-warning">Adicionar Pedido</button>
+                    </form>
+                </div>
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -48,9 +47,26 @@
         <hr>
         <br>
         <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 ">
+                <table class="table">
+                    <thead id="sh">
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Menu</th>
+                            <th>Extra</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6 ">
-                <button id=clk2 class="btn btn-outline-danger">FACTURAR</button>                
+                <button id=clk2 class="btn btn-outline-success">FACTURAR</button>
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -66,7 +82,9 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="jscode.js"></script>
+    <script src="jsclass.js"></script>
+    <script src="jsfunction.js"></script>
+    <script src="jsmain.js"></script>
 </body>
 
 </html>
