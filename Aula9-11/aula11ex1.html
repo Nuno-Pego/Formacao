@@ -10,23 +10,49 @@
         crossorigin="anonymous">
 
 <body>
-
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" href="Aula9ex1.html">Fazer pedido</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Aula10ex1.html">Lista de pedidos</a>
-        </li>
-    </ul>
-
-    <label for="sel1">Select list:</label>
-    <select class="form-control" id="sel1">
-        <option>Mostrar todos</option>
-        <option>Pedidos especiais</option>
-        <option>Sem pedidos especiais</option>       
-    </select>
-
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="Aula9ex1.html">Fazer pedido</a>
+            </li>
+            <li class="nav-item">
+                <a id="a1" class="nav-link" href="Aula11ex1.html">Lista de pedidos</a>
+            </li>
+        </ul>
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-9 ">
+                <label for="sel1">Pedidos: </label>
+                <select class="selectpicker" id="sel1">
+                    <option>Todos</option>
+                    <option>C/ Especiais</option>
+                    <option>S/ Especiais</option>
+                </select>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 ">
+                <table class="table">
+                    <thead id="sh2">
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Menu</th>
+                            <th>Extra</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

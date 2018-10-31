@@ -7,8 +7,8 @@
 class Factura {
 
     constructor(cliente, artigo) {
-        this.id = new Date().getTime();
-        this.cliente = cliente;
+        //this.id = new Date().getTime();
+        this.name = cliente;
         this.artigos = [artigo];
     }
 
@@ -27,7 +27,7 @@ class Factura {
 class Artigo {
 
     constructor(menu, extra) {
-        this.menu = menu;
+        this.name = menu;
         this.extra = extra;
     }
 

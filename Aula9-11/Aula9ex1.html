@@ -17,11 +17,11 @@
             <a class="nav-link active" href="Aula9ex1.html">Fazer pedido</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Aula10ex1.html">Lista de pedidos</a>
+            <a id="clkp" class="nav-link" href="#pg2">Lista de pedidos</a>
         </li>
     </ul>
     <br>
-    <div class="container text-center">
+    <div id="pg1" class="container text-center">
         <br>
         <div class="row">
             <div class="col-sm-3"></div>
@@ -42,8 +42,7 @@
                 </div>
             </div>
             <div class="col-sm-3"></div>
-        </div>
-        <br>
+        </div>        
         <hr>
         <br>
         <div class="row">
@@ -69,6 +68,42 @@
                 <button id=clk2 class="btn btn-outline-success">FACTURAR</button>
             </div>
             <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <hr>
+    <div id="pg2">        
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-9 ">
+                <label for="sel1">Pedidos: </label>
+                <select class="selectpicker" id="sel1">
+                    <option>Todos</option>
+                    <option>C/ Especiais</option>
+                    <option>S/ Especiais</option>
+                </select>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 ">
+                <table class="table">
+                    <thead id="sh2">
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Menu</th>
+                            <th>Extra</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-2"></div>
         </div>
     </div>
 
