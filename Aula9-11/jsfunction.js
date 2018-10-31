@@ -52,14 +52,14 @@ function tab(factura, ctrl) {
     if (ctrl == false) {
         txt = ` <tr>
         <td> ${factura.name} </td>
-        <td> ${factura.artigos[0].name} </td>
+        <td> ${factura.artigos[0].menu} </td>
         <td> ${factura.artigos[0].extra} </td>
     </tr>`;
     } else {
         for (let index = 1; index < factura.artigos.length; index++) {
             txt = ` <tr>
         <td></td>
-        <td> ${factura.artigos[index].name} </td>
+        <td> ${factura.artigos[index].menu} </td>
         <td> ${factura.artigos[index].extra} </td> 
         </tr>`;
 

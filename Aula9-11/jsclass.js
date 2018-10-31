@@ -27,7 +27,7 @@ class Factura {
 class Artigo {
 
     constructor(menu, extra) {
-        this.name = menu;
+        this.menu = menu;
         this.extra = extra;
     }
 
