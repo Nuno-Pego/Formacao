@@ -1,0 +1,20 @@
+
+body{
+    background-color: rgb(223, 230, 230);     
+}
+
+#gift1{
+    text-align: left;   
+    color: rgb(40, 46, 94);
+    background-image: url("http://www.lovethisgif.com/uploaded_images/148929-Reading-Stick-Carrying-Books.gif");
+    background-repeat: no-repeat;    
+    background-size: 180px;    
+    position: relative; 
+    height: 200px;
+    width: 150px;                
+}
+
+#txt1{
+    text-align: left;       
+}
+    
