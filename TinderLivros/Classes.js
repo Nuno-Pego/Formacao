@@ -5,24 +5,22 @@
  * @param {string} 
  * @param {string}
  * @param {string}  
- * @param {string} 
- * @param {string} 
- * @param {string}   
+ * @param {string}
+ * @param {string}
+ * @param {string}  
  */
 
-class Books{
+class Books {
 
-    constructor(id,category,title,authors,numerPage,rating,image,link) {
+    constructor(id, title, authors, numerPage, image, link, like, description) {
 
-       this.id = id;
-       this.category=category;
-       this.title=title;
-       this.authors=authors;
-       this.numerPage=numerPage;
-       this.rating=rating;
-       this.image=image;
-       this.link=link;
-        
+        this.id = id;
+        this.title = title;
+        this.authors = authors;
+        this.numerPage = numerPage;
+        this.image = image;
+        this.link = link;
+        this.like = like;
+        this.description = description;
     }
-
 }

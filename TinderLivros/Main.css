@@ -1,20 +1,42 @@
 
 body{
-    background-color: rgb(223, 230, 230);     
+    background-color: rgb(180, 185, 185);     
 }
 
+#cabecalho{
+    height: 90px;
+}
 #gift1{
-    text-align: left;   
+    text-align: center;   
     color: rgb(40, 46, 94);
     background-image: url("http://www.lovethisgif.com/uploaded_images/148929-Reading-Stick-Carrying-Books.gif");
     background-repeat: no-repeat;    
-    background-size: 180px;    
-    position: relative; 
-    height: 200px;
-    width: 150px;                
+    background-size: 80px;
+    background-position-x: 15%;    
+    position: relative;                     
 }
 
 #txt1{
-    text-align: left;       
+    text-align: left;
+    padding-left: 10%;        
 }
-    
+
+#s1{
+  padding-left: 6%; 
+}
+
+#imgbk{
+    height: 230px;
+    width: 250px; 
+}
+
+.card-body{
+    background-color: rgb(223, 230, 230);    
+}
+
+#clki{    
+    position: inherit;
+    bottom: 0%;      
+}
+
+

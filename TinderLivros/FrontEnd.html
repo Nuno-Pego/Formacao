@@ -20,39 +20,37 @@
 
 <body>
     <br>
-    <div class="container-fluid">
+    <div id="cabecalho" class="container-fluid">
         <div class="row">
             <div id="gift1" class="col-sm-3">
                 <h1>Binder</h1>
             </div>
-            <div id="txt1"class="col-sm-8 ">
-                <h3>The book you don’t read won’t help.</h3>
-                <hr>                
-                <small>If you only read the books that everyone else is reading,<br> 
-                    you can only think what everyone else is thinking.</small>
+            <div id="txt1" class="col-sm-8 ">
+                <div>
+                    <h2>So many books, so little time.</h2>
+                </div>
+                <div id="s1">
+                    <small><b>If you only read the books that everyone else is reading,<br> you can only think what
+                            everyone
+                            else is thinking.</b></small>
+                </div>
             </div>
             <div class="col-sm-1"></div>
         </div>
     </div>
     <br>
-    <br>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8 ">
-                <div class="card mb-3">
-                    <img class="card-img-top" src="" alt="Book Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Book Title</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-outline-success"><i class="far fa-thumbs-up"></i></button>
-                    <button type="button" class="btn btn-outline-danger"><i class="far fa-thumbs-down"></i></button>
-                </div>
-            </div>
-            <div class="col-sm-2"></div>
+    <div class="card text-center">
+        <div class="card-body">
+            <a id="d3" target="_blank"><img id="imgbk" src="" alt="Book Image"></a>
+            <br>            
+            <p id="descr"></p>
+            <br>
+            <h5 id="ttl" class="card-title"></h5>
+            <p id="d1" class="card-text"></p>
+            <p id="d2" class="card-text"></p>
+            <button id="clkl" type="button" class="btn btn-outline-success"><i class="far fa-thumbs-up"></i></button>
+            <button id="clkd" type="button" class="btn btn-outline-danger"><i class="far fa-thumbs-down"></i></button>
+            <button id="clki" type="button" class="btn btn-info"><i class="fas fa-info"></i></button>
         </div>
     </div>
 
@@ -68,7 +66,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
-    <script src="Classes.js"></script>   
+    <script src="Classes.js"></script>
     <script src="Main.js"></script>
 
 </body>
