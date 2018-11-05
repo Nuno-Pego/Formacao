@@ -1,21 +1,23 @@
 
 var books = [];
+var likebooks = [];
 var b = 0;
 var a;
+var l = 0;
 
 $(document).ready(function () {
     getBooks();
 })
 
-
 function getBooks() {
     $.ajax({
-        url: "https://www.googleapis.com/books/v1/volumes?q=" + (generateTerm()) + "&maxResults=10&startIndex=" + (books.length + 1),
+        url: "https://www.googleapis.com/books/v1/volumes?q=" + (generateTerm()) + "&maxResults=40&startIndex=" + (books.length),
         type: 'GET',
         contentType: 'aplication/json',
         success: function (data) {
 
             orgBooks(data);
+            console.log(books);
 
             if (b == 0) {
                 getInfo();
@@ -53,35 +55,36 @@ function getInfo() {
     ebook = books[b];
     $("#imgbk").attr("src", ebook.image);
     $("#ttl").html(ebook.title);
-    $("#d1").html("Authors: " + ebook.authors);
-    $("#d2").html("Páginas: " + ebook.numerPage);
+    $("#d1").html("<b>Authors:</b> " + ebook.authors);
+    $("#d2").html("<b>Pages:</b> " + ebook.numerPage);
     $("#d3").attr("href", ebook.link);
 
     if (b == books.length - 5) {
         getBooks();
-    }
+    }    
 }
 
 $("#clkl").click(function () {
     ebook = books[b];
     ebook.like = ebook.like + 1;
+    likebooks[l]=ebook;   
+    l++;
     b++;
     getInfo();
-    console.log(b);
+    
 })
 
 $("#clkd").click(function () {
     b++;
     getInfo();
-    console.log(b);
 })
 
-$("#clki").click(function () {    
+$("#clki").click(function () {
     ebook = books[b];
     if (a % 2 !== 0) {
         $("#descr").show();
-        $("#descr").html("<br><b>Description:</b> "+ebook.description);
-    }else{
+        $("#descr").html("<br><b>Description:</b> " + ebook.description);
+    } else {
         $("#descr").html("");
     }
     a++;

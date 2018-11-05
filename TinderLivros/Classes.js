@@ -2,11 +2,11 @@
 /** 
  * @param {string}  
  * @param {string} 
- * @param {string} 
- * @param {string}
- * @param {string}  
- * @param {string}
- * @param {string}
+ * @param {array} 
+ * @param {number}
+ * @param {link}  
+ * @param {link}
+ * @param {number}
  * @param {string}  
  */
 
