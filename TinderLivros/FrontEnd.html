@@ -19,24 +19,31 @@
 </head>
 
 <body>
-    <br>
-    <br>
+    <br>    
     <div id="cabecalho" class="container-fluid">
         <div class="row">
             <div class="col-xs-3 col-sm-2 col-lg-1">
-                <h1 id="logo">Binder</h1>                  
+                <h1 id="logo">Binder</h1>                
+                <div id="srch" class="input-group mb-3">
+                    <input id="ipts" type="text" class="form-control" placeholder="Search" maxlength="5">
+                    <div class="input-group-append">
+                      <button id="clks" class="btn btn-primary" type="button">Get</button>
+                    </div>
+                  </div>                  
             </div>
             <div id="txt1" class="col-xs-7 col-sm-8 col-lg-9">
                 <div>
                     <h2>So many books, so little time.</h2>
                 </div>
                 <br>
-                <div id="s1">
+                <div>
                     <pre><b>If you only read the books that everyone else is reading,
 you can only think what everyone else is thinking.</b></pre>
                 </div>
             </div>
-            <div id="imgic" class="col-xs-2 col-sm-2 col-lg-2"></div>
+            <div class="col-xs-2 col-sm-2 col-lg-2">
+                <a href="" id="clktb"><img id="imgic" src="http://www.lovethisgif.com/uploaded_images/148929-Reading-Stick-Carrying-Books.gif" alt=""></a>
+            </div>
         </div>
     </div>
     <br>
@@ -46,7 +53,6 @@ you can only think what everyone else is thinking.</b></pre>
         <div class="card-body">
             <br>
             <a id="d3" target="_blank"><img id="imgbk" src="" alt="Book Image"></a>
-            <br>
             <br>
             <p id="descr"></p>
             <br>
@@ -59,7 +65,19 @@ you can only think what everyone else is thinking.</b></pre>
             <button id="clkd" type="button" title="Dislike" class="btn btn-outline-danger"><i class="far fa-thumbs-down"></i></button>
             <button id="clki" type="button" title="Info" class="btn btn-info"><i class="fas fa-info"></i></button>
         </div>
-    </div>   
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Authors</th>
+                <th scope="col">Title</th>
+                <th scope="col">Pages</th>
+                <th scope="col">Likes</th>
+            </tr>
+        </thead>
+        <tbody id="cttb">
+        </tbody>
+    </table>
 
 
 
@@ -72,7 +90,7 @@ you can only think what everyone else is thinking.</b></pre>
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->    
     <script src="Classes.js"></script>
     <script src="Main.js"></script>
 

@@ -1,34 +1,41 @@
-
+/* Elements*/
 body{
-    background-color: rgb(180, 185, 185);
-       
-}
-
-#cabecalho{
-    height: 90px;        
+    background-color: rgb(180, 185, 185);       
 }
 
 pre{
     overflow: hidden;
 }
 
+/* classes*/
+.card-body{
+    background-color: rgb(223, 230, 230);    
+}
+
+.table{
+    text-align: center;
+}
+
+/* ID's*/
+#cabecalho{
+    height: 90px;        
+}
+
 #logo{
-    text-align: center;   
-    color: rgb(40, 46, 94);
-    padding-left: 10%;
+    text-align: center;
+    padding-left: 30px;      
+    color: rgb(40, 46, 94);    
     background-image: url("https://i1.wp.com/www.techemportugues.com/wp-content/uploads/2016/05/google-cover.png?resize=700%2C350&ssl=1");
     background-size: 200px;    
     background-repeat: no-repeat;
-    height: 200px;
+    height: 100px;
     width: 200px;               
 }
 
-#imgic{
-    size:150px;
-    background-image: url("http://www.lovethisgif.com/uploaded_images/148929-Reading-Stick-Carrying-Books.gif");
-    background-size: 100px;    
-    background-repeat: no-repeat;
-    height: 150px;    
+#srch{
+    width: 200px;
+    height: 35px;
+    padding-left: 20px;
 }
 
 #txt1{
@@ -36,13 +43,14 @@ pre{
     padding-left: 8%;           
 }
 
-#imgbk{
-    height: 350px;
-    width: 250px; 
-}
+#imgic{
+    size:150px;       
+    height: 150px;       
+} 
 
-.card-body{
-    background-color: rgb(223, 230, 230);    
+#imgbk{
+    height: 400px;
+    width: 250px; 
 }
 
 #clki{    
@@ -50,7 +58,4 @@ pre{
     bottom: 0%;          
 }
 
-#jv{
-    height: 100%;
-    width: 100%;
-}
+
