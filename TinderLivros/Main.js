@@ -3,16 +3,17 @@ var books = [];
 var likebooks = [];
 var k = 0;
 var a;
-var l = 0;
+var b = 1;
 var text = "";
 
 
-$(document).ready(function () {    
-        getBooks();
-        // $(".table").hide();             
+$(document).ready(function () {
+    getBooks();
+    $(".table").hide();
+    $("#txta").hide();
 })
 
-function getBooks() {     
+function getBooks() {
     $.ajax({
         url: "https://www.googleapis.com/books/v1/volumes?q=" + (generateTerm()) + "&maxResults=40&startIndex=" + (k),
         type: 'GET',
@@ -37,6 +38,16 @@ function orgBooks(data) {
 
     for (let i = 0; i < data.items.length; i++) {
         const element = data.items[i];
+
+        if (element.volumeInfo.pageCount == undefined) {
+            element.volumeInfo.pageCount = "--";
+        }
+        if (element.volumeInfo.authors == undefined) {
+            element.volumeInfo.authors = "----";
+        }
+        if (element.volumeInfo.description == undefined) {
+            element.volumeInfo.description = "UPS!, no description...";
+        }
 
         if (element.volumeInfo.imageLinks == undefined) {
 
@@ -68,10 +79,22 @@ function getInfo() {
     }
 }
 
-// $("#clktb").click(function () {
-//     $(".card text-center").hide();
-//     $(".table").show();  
-// })
+
+$("#clktb").click(function () {
+    $("td").remove();
+    if (b % 2 !== 0) {
+        $(".card-body").hide();
+        $(".table").show();
+        for (let index = 0; index < likebooks.length; index++) {
+            const element = likebooks[index];
+            $("#cttb").append(creatTable(element));
+        }
+    } else {
+        $(".card-body").show();
+        $(".table").hide();
+    }
+    b++;
+})
 
 $("#clks").click(function () {
     text = $("#ipts").val();
@@ -81,14 +104,33 @@ $("#clks").click(function () {
 })
 
 $("#clkl").click(function () {
-    ebook = books[0];        
-    ebook.like = ebook.like + 1;
-    likebooks.push(ebook);
-    $("#cttb").append(creatTable(ebook));      
+    ebook = books[0];
+
+    var ctrl = false;
+    for (let j = 0; j < likebooks.length; j++) {
+        const element = likebooks[j];
+
+        if (element.id === ebook.id) {
+            ctrl = true;
+            likebooks[j].like++;
+        }
+    }
+    if (ctrl == false) {
+        ebook.like++;
+        likebooks.push(ebook);
+        console.log("aqui");
+    }
+
+    $("#txta").show();
+    if (likebooks.length == 1) {
+        $("#txta").attr("placeholder", `${likebooks.length} Liked Book`);
+    } else {
+        $("#txta").attr("placeholder", `${likebooks.length} Liked Books`);
+    }
+
     books.shift();
     console.log(books);
-    getInfo();
-      
+    getInfo();   
 })
 
 $("#clkd").click(function () {
@@ -120,9 +162,9 @@ function generateTerm() {
     return text;
 }
 
-function creatTable(ebook){
+function creatTable(ebook) {
 
-    var txt="";
+    var txt = "";
 
     txt = ` <tr>
         <td> ${ebook.authors} </td>
