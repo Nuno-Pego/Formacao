@@ -123,9 +123,9 @@ $("#clkl").click(function () {
 
     $("#txta").show();
     if (likebooks.length == 1) {
-        $("#txta").attr("placeholder", `${likebooks.length} Liked Book`);
+        $("#txta").attr("placeholder", `${likebooks.length} Book`);
     } else {
-        $("#txta").attr("placeholder", `${likebooks.length} Liked Books`);
+        $("#txta").attr("placeholder", `${likebooks.length} Books`);
     }
 
     books.shift();
