@@ -1,0 +1,28 @@
+body{
+    margin-top:0px;
+    background-color: rgb(228, 228, 248)
+}
+
+#searchProducts{
+    width: 150px;
+}
+
+.container{
+    margin: 20px;    
+}
+
+#ClkAll{
+    height: 50px;
+    width: 50px;    
+}
+
+#ClkProducts{
+    height: 50px;
+    width: 50px;    
+}
+
+#ClkShelfs{
+    height: 50px;
+    width: 50px;    
+}
+

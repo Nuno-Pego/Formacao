@@ -13,20 +13,66 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
     <!-- Optional CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="Main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
     <title>StockManagement</title>
 
 </head>
 
-<body>
-    <!-- https://mcupacademy.herokuapp.com/explorer/ -->
-    <!-- mdbootstrap-->
-    <!-- bootsnipp accordion menu -->
+<body>   
+    <!--https://bootsnipp.com/snippets/r8rrz-->
 
-
-
-
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">StockManagement</a>
+        <form class="form-inline">
+            <input id="searchProducts" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Go</button>
+        </form>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div id="navbar" class="col-sm-2 col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button id="ClkAll" type="button" title="All" class="btn btn-outline-info"><i class="fas fa-globe"></i></button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><button id="ClkProducts"
+                                type="button" title="Products" class="btn btn-outline-info"><i class="fas fa-shopping-basket"></i></button></a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><button id="ClkShelfs"
+                                type="button" title="Shelfs" class="btn btn-outline-info"><i class="fas fa-boxes"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10 col-md-10">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td><a data-original-title="Edit" href="#"><i class="fas fa-edit"></i></a> <a
+                                    data-original-title="Delete" href="#"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -41,6 +87,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
+    <script src="main.js"></script>
 </body>
 
 </html>
