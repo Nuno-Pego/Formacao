@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
-    getProducts();
+    // getProducts();
+    getShelves();
 })
 
 
@@ -12,6 +13,21 @@ function getProducts() {
         success: function (data) {
             console.log(data)
             createTable(data);
+        },
+        error: function (data) {
+            console.log("Error ", data);
+        }
+    });
+}
+
+
+function getShelves() {
+    $.ajax({
+        url: "https://mcupacademy.herokuapp.com/api/Shelves",
+        type: 'GET',
+        contentType: 'aplication/json',
+        success: function (data) {
+            console.log(data)            
         },
         error: function (data) {
             console.log("Error ", data);
