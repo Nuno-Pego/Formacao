@@ -1,28 +1,54 @@
+/* Elements */
 body{
     margin-top:0px;
     background-color: rgb(228, 228, 248)
 }
 
-#searchProducts{
-    width: 150px;
+nav{ 
+   background-image: url("https://eal-website.s3.amazonaws.com/cms/hierarchy/large/stockputaway.png");
+   background-repeat: no-repeat;
+   background-size: 100px;
+   background-position-x: 99%;  
 }
 
-.container{
-    margin: 20px;    
+/* Class */
+.container{    
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;   
+}
+
+.panel-heading{    
+    text-align: center;   
+}
+
+/* ID */
+#imgvikings{
+    height: 60px;    
 }
 
 #ClkAll{
-    height: 50px;
-    width: 50px;    
+    height: 80px;
+    width: 80px;
+    color: #4A7684;    
 }
 
 #ClkProducts{
     height: 50px;
-    width: 50px;    
+    width: 60px;
+    color: #4A7684;    
 }
 
 #ClkShelfs{
     height: 50px;
-    width: 50px;    
+    width: 60px;
+    color: #4A7684;    
 }
+
+#showtable{
+    padding-left: 100px;
+}
+
+
+
 
