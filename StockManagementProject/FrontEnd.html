@@ -33,28 +33,47 @@
             <div id="vertivalnavbar" class="col-sm-1 col-md-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <button id="ClkAll" type="button" title="All" class="btn btn-outline-info"><i class="fas fa-globe"></i></button>
+                        <button id="ClkAll" type="button" title="Show All" class="btn btn-outline-dark"><i class="fas fa-globe"></i></button>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a><button id="ClkProducts" type="button" title="Products" class="btn btn-outline-info"><i
+                        <a><button id="ClkProducts" type="button" title="Products" class="btn btn-outline-dark"><i
                                     class="fas fa-shopping-basket"></i></button></a>
                     </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a><button id="ClkShelfs" type="button" title="Shelfs" class="btn btn-outline-info"><i class="fas fa-boxes"></i></button></a>
+                        <a><button id="ClkShelfs" type="button" title="Shelfs" class="btn btn-outline-dark"><i class="fas fa-boxes"></i></button></a>
                     </div>
                 </div>
             </div>
-            <div id="showtable" class="col-sm-10 col-md-10">
-                <table class="table table-striped">
-                    <thead></thead>
-                    <tbody></tbody>
+            <div id="showtable1" class="col-sm-5 col-md-5">
+                <h3>Products</h3>
+                <table id="tbProduct" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Discont</th>
+                            <th>IVA</th>
+                            <th>PVP</th>
+                            <th>ID</th>
+                        <tr>
+                    </thead>                    
                 </table>
             </div>
-            <div class="col-sm-1 col-md-1"></div>
+            <div id="showtable2" class="col-sm-5 col-md-5">
+                <h3>Shelves</h3>
+                <table id="tbShelves" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Capacity</th>
+                            <th>ID</th>
+                            <th>Product ID</th>
+                            <th>Rent Price</th>
+                        </tr>
+                    </thead>                   
+                </table>
+            </div>
         </div>
     </div>
 
