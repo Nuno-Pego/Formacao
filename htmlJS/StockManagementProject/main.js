@@ -5,6 +5,8 @@ $("#showtable2").hide();
 var ctrl;
 
 $(document).ready(function () {
+    var iva, pvp, discountPrice;
+   
 
     $("#ClkAll").click(function () {
         $("#tbProduct tbody").remove();
@@ -37,16 +39,66 @@ $(document).ready(function () {
         getShelves();
 
     })
+
+    $("#ClkAddProduct").click(function () {
+
+        var product = {
+            "discountPrice": discountPrice,
+            "iva": iva,
+            "pvp": pvp,            
+        }    
+
+        AddProduct(product);
+    })
+
+    $("#ClkAddShelf").click(function () {  
+        
+        var shelf = {
+            "product": product,
+            "capacity": capacity,
+            "price": price,
+        }
+        
+        AddShelf(shelf);
+    })
 })
+
+//////////////////////////////////////////////////////////////////////
+
+function AddProduct(product) {
+    $.ajax({
+        url: "http://localhost:8080/StockManagmentJRS/api/product/add",
+        type: 'POST',
+        contentType: 'aplication/json',
+        success: function (data) {          
+        },
+        error: function (data) {
+            console.log("Error ", data);
+        }
+    });
+}
+
+
+function AddShelf(shelf) {
+    $.ajax({
+        url: "http://localhost:8080/StockManagmentJRS/api/shelf/add",
+        type: 'POST',
+        contentType: 'aplication/json',
+        success: function (data) {            
+        },
+        error: function (data) {
+            console.log("Error ", data);
+        }
+    });
+}
 
 
 function getProducts() {
     $.ajax({
-        url: "https://mcupacademy.herokuapp.com/api/Products",
+        url: "http://localhost:8080/StockManagmentJRS/api/product/getAll",
         type: 'GET',
         contentType: 'aplication/json',
-        success: function (data) {
-            console.log(data);
+        success: function (data) {          
             $("#showtable1").show();
             createTableProduct(data);
         },
@@ -59,11 +111,10 @@ function getProducts() {
 
 function getShelves() {
     $.ajax({
-        url: "https://mcupacademy.herokuapp.com/api/Shelves",
+        url: "http://localhost:8080/StockManagmentJRS/api/shelf/getAll",
         type: 'GET',
         contentType: 'aplication/json',
-        success: function (data) {
-            console.log(data);
+        success: function (data) {            
             $("#showtable2").show();
             createTableShelves(data);
         },
@@ -73,6 +124,7 @@ function getShelves() {
     });
 }
 
+////////////////////////////////////////////////////////////////////////
 
 function createTableProduct(data) {
 
@@ -81,8 +133,8 @@ function createTableProduct(data) {
 
         var txt1 = `<tbody>
             <tr>
-            <td>${element.discountValue}</td>
             <td>${element.id}</td>
+            <td>${element.discountPrice}</td>            
             <td>${element.iva}</td>
             <td>${element.pvp}</td>`;
         if (ctrl == true) {
@@ -102,10 +154,10 @@ function createTableShelves(data) {
 
         var txt1 = `<tbody>
             <tr>
-            <td>${element.capacity}</td>
             <td>${element.id}</td>
-            <td>${element.productId}</td>
-            <td>${element.rentPrice}</td>`;
+            <td>${element.product}</td>
+            <td>${element.capacity}</td>            
+            <td>${element.price}</td>`;
 
         if (ctrl == true) {
             var txt2 = `<td><a title="Edit" data-original-title="Edit" href="#"><i class="fas fa-edit"></i></a> <a

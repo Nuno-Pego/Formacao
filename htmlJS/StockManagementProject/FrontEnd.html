@@ -25,7 +25,19 @@
     <nav class="navbar navbar-light bg-light justify-content-between">
         <a class="navbar-brand">
             <h3>StockManagement</h3>
-        </a>
+        </a> 
+        <div>     
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalAddProduct">Add Product</button>
+        <div id="#ModalAddProduct" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalAddProduct" aria-hidden="true">
+            <input id = "iptDiscPrice" placeholder="Discount Price"><label for="iptDiscPrice">%</label>
+            <input placeholder="IVA">
+            <input placeholder="PVP">
+        </div>      
+        <button  type="button" class="btn btn-outline-primary" data-target="#ModalAddShelf">Add Shelf</button>
+        <div id="#ModalAddShelf" class="modal fade" >
+            
+        </div> 
+        </div>        
     </nav>
     <br>
     <div class="container-fluid">
@@ -53,12 +65,12 @@
                 <table id="tbProduct" class="table table-striped">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Discont</th>
                             <th>IVA</th>
                             <th>PVP</th>
-                            <th>ID</th>
                         <tr>
-                    </thead>                    
+                    </thead>
                 </table>
             </div>
             <div id="showtable2" class="col-sm-5 col-md-5">
@@ -66,12 +78,12 @@
                 <table id="tbShelves" class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Capacity</th>
                             <th>ID</th>
-                            <th>Product ID</th>
+                            <th>Product</th>
+                            <th>Capacity</th>
                             <th>Rent Price</th>
                         </tr>
-                    </thead>                   
+                    </thead>
                 </table>
             </div>
         </div>
